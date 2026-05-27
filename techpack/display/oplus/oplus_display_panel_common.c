@@ -1179,15 +1179,15 @@ int oplus_display_panel_notify_blank(void *data)
 		notifier_data.data = &blank;
 		notifier_data.id = 0;
 		//msm_drm_notifier_call_chain(MSM_DRM_EARLY_EVENT_BLANK,
-					    &notifier_data);
+					    //&notifier_data);
 		//msm_drm_notifier_call_chain(MSM_DRM_EVENT_BLANK,
-					    &notifier_data);
+					    //&notifier_data);
 	} else if (temp_save == 0) {
 		blank = MSM_DRM_BLANK_POWERDOWN;
 		notifier_data.data = &blank;
 		notifier_data.id = 0;
 		//msm_drm_notifier_call_chain(MSM_DRM_EARLY_EVENT_BLANK,
-					    &notifier_data);
+					    //&notifier_data);
 	}
 	return 0;
 }
