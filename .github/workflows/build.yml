@@ -17,6 +17,7 @@ jobs:
           arch: arm64
           android-version: 13
           aosp-clang: true
+          aosp-gcc: true     # <--- ADD THIS LINE HERE
           ksu: false
           release: true
           access-token: ${{ secrets.GITHUB_TOKEN }}
