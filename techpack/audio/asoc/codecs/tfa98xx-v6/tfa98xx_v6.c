@@ -5549,7 +5549,7 @@ static int tfa98xx_i2c_probe(struct i2c_client *i2c,
 			 (void *)TFA98XX_DEBUG_FS_NAME);
 #endif /*CONFIG_DEBUG_FS*/
 
-	ftm_mode = get_boot_mode();
+	//ftm_mode = get_boot_mode();
 	pr_info("ftm_mode=%d\n", ftm_mode);
 #endif /* OPLUS_ARCH_EXTENDS */
 
