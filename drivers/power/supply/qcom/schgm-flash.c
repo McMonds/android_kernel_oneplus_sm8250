@@ -15,6 +15,7 @@
 #include <linux/of_irq.h>
 #include <linux/printk.h>
 #include <linux/pmic-voter.h>
+#include "smb5-lib.h"
 #ifndef OPLUS_FEATURE_CHG_BASIC
 #include "smb5-lib.h"
 #endif
