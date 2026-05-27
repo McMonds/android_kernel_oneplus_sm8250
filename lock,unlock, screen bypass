@@ -1,0 +1,27 @@
+.github/workflows/build.yml
+
+name: Build Patched OnePlus 9R Kernel
+
+on:
+  workflow_dispatch: # Allows you to trigger the build manually with a button
+
+jobs:
+  build-kernel:
+    name: Build Kernel
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        uses: dabao1955/kernel_build_action@main
+        with:
+          # Link to your personal patched fork
+          kernel-url: https://github.com/McMonds/android_kernel_oneplus_sm8250
+          kernel-branch: lineage-23.2
+          # Defconfig for OnePlus 8T/9R
+          config: vendor/kona-perf_defconfig
+          arch: arm64
+          android-version: 13
+          aosp-clang: true
+          # We keep it unrooted (no Magisk) as requested
+          ksu: false
+          release: true
+          access-token: ${{ secrets.GITHUB_TOKEN }}
