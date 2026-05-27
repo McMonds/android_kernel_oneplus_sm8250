@@ -15,9 +15,10 @@ jobs:
           kernel-branch: lineage-23.2
           config: vendor/kona-perf_defconfig
           arch: arm64
-          android-version: 14
+          android-version: 11          # <--- CHANGE THIS TO 11
+          aosp-clang-version: r383902  # <--- ADD THIS EXPLICIT VERSION
           aosp-clang: true
-          aosp-gcc: true     # <--- ADD THIS LINE HERE
+          aosp-gcc: true
           ksu: false
           release: true
           access-token: ${{ secrets.GITHUB_TOKEN }}
