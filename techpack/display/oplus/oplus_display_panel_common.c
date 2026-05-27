@@ -46,7 +46,7 @@ DEFINE_MUTEX(oplus_spr_lock);
 
 EXPORT_SYMBOL(oplus_dither_enable);
 
-extern int msm_drm_notifier_call_chain(unsigned long val, void *v);
+//extern int msm_drm_notifier_call_chain(unsigned long val, void *v);
 extern int __oplus_display_set_spr(int mode);
 extern int dsi_display_spr_mode(struct dsi_display *display, int mode);
 
@@ -1178,15 +1178,15 @@ int oplus_display_panel_notify_blank(void *data)
 		blank = MSM_DRM_BLANK_UNBLANK;
 		notifier_data.data = &blank;
 		notifier_data.id = 0;
-		msm_drm_notifier_call_chain(MSM_DRM_EARLY_EVENT_BLANK,
+		//msm_drm_notifier_call_chain(MSM_DRM_EARLY_EVENT_BLANK,
 					    &notifier_data);
-		msm_drm_notifier_call_chain(MSM_DRM_EVENT_BLANK,
+		//msm_drm_notifier_call_chain(MSM_DRM_EVENT_BLANK,
 					    &notifier_data);
 	} else if (temp_save == 0) {
 		blank = MSM_DRM_BLANK_POWERDOWN;
 		notifier_data.data = &blank;
 		notifier_data.id = 0;
-		msm_drm_notifier_call_chain(MSM_DRM_EARLY_EVENT_BLANK,
+		//msm_drm_notifier_call_chain(MSM_DRM_EARLY_EVENT_BLANK,
 					    &notifier_data);
 	}
 	return 0;
