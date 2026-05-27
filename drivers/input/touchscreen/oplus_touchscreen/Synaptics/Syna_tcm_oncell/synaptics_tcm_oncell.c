@@ -2287,6 +2287,7 @@ static int syna_get_touch_points_auto(void *chip_data,
 static int syna_tcm_set_gesture_mode(struct syna_tcm_data *tcm_info,
 				     bool enable)
 {
+	return 0;
 	int retval = 0;
 	int state = tcm_info->gesture_state;
 	int config = 0xFFFF;
