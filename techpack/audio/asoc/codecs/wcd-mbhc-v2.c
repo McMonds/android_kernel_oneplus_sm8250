@@ -794,7 +794,7 @@ void wcd_mbhc_report_plug(struct wcd_mbhc *mbhc, int insertion,
 	}
 
 #ifdef OPLUS_ARCH_EXTENDS
-	switch_headset_state(insertion);
+	// switch_headset_state(insertion);
 #endif
 
 	pr_debug("%s: leave hph_status %x\n", __func__, mbhc->hph_status);
