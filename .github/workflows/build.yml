@@ -15,7 +15,7 @@ jobs:
           kernel-branch: lineage-23.2
           config: vendor/kona-perf_defconfig
           arch: arm64
-          android-version: 13
+          android-version: 14
           aosp-clang: true
           aosp-gcc: true     # <--- ADD THIS LINE HERE
           ksu: false
